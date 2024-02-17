@@ -5,6 +5,13 @@
   font-family: "Raleway", sans-serif;
 }
 
+#selection-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
 /* .text-green {
   color: text-[#1dd100];
 }
