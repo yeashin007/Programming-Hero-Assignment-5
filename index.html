@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="font-raleway max-w-[1400px] w-4/5 mx-auto my-12">
+    <nav class="font-raleway max-w-[1400px] w-full lg:w-4/5 mx-auto p-3 my-12">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -57,7 +57,7 @@
             </ul>
           </div>
           <a
-            class="btn btn-ghost text-4xl font-extrabold uppercase hover:bg-[#1dd10066]"
+            class="btn btn-ghost -ml-3 md:ml-0 lg:block text-base lg:text-4xl font-extrabold uppercase hover:bg-[#1dd10066]"
             >Safe - Travels</a
           >
         </div>
@@ -82,10 +82,10 @@
     <main>
       <!-- banner section -->
       <section
-        class="max-w-[1400px] w-4/5 mx-auto bg-[url('images/banner.png')] min-h-screen rounded-3xl bg-center bg-cover flex justify-center items-center bg"
+        class="max-w-[1400px] w-11/12 lg:w-4/5 mx-auto bg-[url('images/banner.png')] min-h-screen rounded-3xl bg-center bg-cover flex justify-center items-center bg"
       >
         <div class="w-3/4 text-center space-y-3">
-          <h1 class="text-6xl font-extrabold text-white">
+          <h1 class="text-3xl lg:text-6xl font-extrabold text-white">
             End-to-End Travel with<br />
             <span class="text-[#1dd100]">Paribahab</span>
           </h1>
@@ -103,17 +103,21 @@
       </section>
 
       <!-- offer section -->
-      <section class="max-w-[1400px] w-4/5 mx-auto my-12 font-inter">
-        <h2 class="font-raleway text-4xl font-bold text-center">
+      <section
+        class="max-w-[1400px] w-full p-3 lg:w-4/5 mx-auto my-12 font-inter"
+      >
+        <h2 class="font-raleway text-2xl lg:text-4xl font-bold text-center">
           Best offers for you
         </h2>
         <!-- coupon container -->
-        <div class="flex justify-between gap-6 *:flex-1 *:rounded-3xl my-10">
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-6 *:flex-1 *:rounded-3xl my-10"
+        >
           <!-- 1st coupon -->
-          <div class="bg-[#FFBF0F] flex justify-evenly items-center">
-            <div>
-              <h2 class="text-4xl font-extrabold">15% Off</h2>
-              <p>
+          <div class="bg-[#FFBF0F] max-w-full flex justify-evenly items-center">
+            <div class="p-2">
+              <h2 class="text-2xl lg:text-4xl font-extrabold">15% Off</h2>
+              <p class="text-xs md:text-base">
                 on your next purchase
                 <span class="block text-[#03071280]">use by January 2024</span>
               </p>
@@ -121,30 +125,36 @@
             <div>
               <img src="images/cupon-devider.png" alt="" />
             </div>
-            <div>
-              <h3 class="font-raleway text-2xl font-bold">NEW15</h3>
-              <p class="text-[#03071280]">Coupon Code</p>
+            <div class="p-2">
+              <h3 class="font-raleway text-2xl lg:text-4xl font-bold">NEW15</h3>
+              <p class="text-[#03071280] text-xs lg:text-base">Coupon Code</p>
             </div>
           </div>
 
           <!-- 2nd coupon -->
           <div class="bg-[#F78C9C] flex justify-center items-center">
             <div>
-              <h2 class="text-4xl font-extrabold">20% Off</h2>
-              <p>
+              <h2 class="text-2xl lg:text-4xl font-extrabold">20% Off</h2>
+              <p class="text-xs lg:text-base">
                 on your next purchase
-                <span class="block text-[#03071280]">use by January 2024</span>
+                <span class="block text-[#03071280] text-xs md:text-base"
+                  >use by January 2024</span
+                >
               </p>
             </div>
             <div>
               <img src="images/cupon-devider.png" alt="" />
             </div>
             <div>
-              <h3 class="font-raleway text-2xl font-bold">Couple 20</h3>
-              <p class="text-[#03071280]">Coupon Code</p>
+              <h3 class="font-raleway text-lg lg:text-2xl font-bold">
+                Couple 20
+              </h3>
+              <p class="text-[#03071280] text-xs md:text-base">Coupon Code</p>
             </div>
           </div>
         </div>
+
+        <!-- offer btn -->
         <div class="flex justify-center items-center">
           <button
             class="btn bg-white border-[#1dd100] text-[#1dd100] text-xl font-bold hover:bg-[#1dd100] hover:text-white"
@@ -158,25 +168,30 @@
       <section
         class="bg-[#F7F8F8] rounded-[40px] py-14 border-t-2 border-[#1dd100]"
       >
-        <div class="max-w-[1400px] w-4/5 mx-auto font-inter space-y-5">
+        <div
+          class="max-w-[1400px] w-full lg:w-4/5 p-2 lg:px-4 mx-auto font-inter space-y-5"
+        >
           <h2 class="font-raleway text-4xl font-bold text-center">
             Safe Paribahan
           </h2>
-          <p class="w-3/4 mx-auto text-center text-gray-400">
+          <p class="w-full md:w-3/4 mx-auto text-center text-gray-400">
             Book your next bus adventure today! Comfortable rides, scenic views,
-            and hassle-free travel. Explore destinations with ease. Reserve your
-            seat now!
+            and hassle-free travel. Explore destinations with ease.
           </p>
-          <div class="flex justify-between items-center bg-white px-5">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center bg-white p-2 lg:px-5"
+          >
             <div class="pt-3 mt-3 flex-1">
-              <div class="flex justify-between">
-                <div class="flex gap-x-4">
+              <div
+                class="flex flex-col-reverse lg:flex-row items-center gap-y-4 justify-between"
+              >
+                <div class="flex gap-x-2">
                   <img src="images/bus-logo.png" alt="bus logo" />
                   <div>
-                    <h3 class="font-raleway text-3xl font-bold">
+                    <h3 class="font-raleway text-lg md::text-3xl font-bold">
                       Greenline Paribahan
                     </h3>
-                    <p class="text-lg text-gray-400">
+                    <p class="text-xs md:text-lg text-gray-400">
                       Coach-009-WEB ! AC_Business
                     </p>
                   </div>
@@ -202,7 +217,7 @@
                   <p>9:00 PM</p>
                 </div>
                 <div
-                  class="flex justify-between *:p-3 *:bg-gray-300 *:rounded-md"
+                  class="flex flex-col lg:flex-row gap-y-3 justify-between *:p-3 *:bg-gray-300 *:rounded-md mt-3"
                 >
                   <span>Boarding Point - Laxmipur</span>
                   <span>Dropping Point - Bogura</span>
@@ -211,7 +226,11 @@
               </div>
             </div>
             <div>
-              <img src="images/info-devider.png" alt="cupon divider" />
+              <img
+                src="images/info-devider.png"
+                alt="cupon divider"
+                class="hidden lg:block"
+              />
             </div>
             <div class="flex flex-col justify-center items-center">
               <img src="images/fare.png" alt="fare pic" />
@@ -221,8 +240,10 @@
           </div>
 
           <!-- 2nd part -->
-          <div class="flex justify-between items-center bg-white px-5 gap-4">
-            <div class="w-3/5 py-5 px-5">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center bg-white p-3 lg:px-5 gap-4"
+          >
+            <div class="w-full lg:w-3/5 py-5 px-5">
               <h4>Select Your Seat</h4>
               <div
                 class="flex justify-between *:flex py-3 mt-3 border-y-2 border-dotted"
@@ -242,7 +263,7 @@
 
               <!-- driver seat -->
               <div class="flex justify-end my-3">
-                <img src="images/stearing.png" alt="" class="w-12 h-10 my-4" />
+                <img src="images/stearing.png" alt="" class="w-14 h-10 my-4" />
               </div>
 
               <!-- A -->
@@ -250,11 +271,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span class="">A</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="A1" class="kbd">A1</kbd>
                   <kbd id="A2" class="kbd">A2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="A3" class="kbd">A3</kbd>
                   <kbd id="A4" class="kbd">A4</kbd>
                 </div>
@@ -265,11 +286,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>B</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="B1" class="kbd">B1</kbd>
                   <kbd id="B2" class="kbd">B2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="B3" class="kbd">B3</kbd>
                   <kbd id="B4" class="kbd">B4</kbd>
                 </div>
@@ -280,11 +301,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>C</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="C1" class="kbd">C1</kbd>
                   <kbd id="C2" class="kbd">C2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="C3" class="kbd">C3</kbd>
                   <kbd id="C4" class="kbd">C4</kbd>
                 </div>
@@ -295,11 +316,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>D</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="D1" class="kbd">D1</kbd>
                   <kbd id="D2" class="kbd">D2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="D3" class="kbd">D3</kbd>
                   <kbd id="D4" class="kbd">D4</kbd>
                 </div>
@@ -310,11 +331,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>E</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="E1" class="kbd">E1</kbd>
                   <kbd id="E2" class="kbd">E2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="E3" class="kbd">E3</kbd>
                   <kbd id="E4" class="kbd">E4</kbd>
                 </div>
@@ -325,11 +346,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>F</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="F1" class="kbd">F1</kbd>
                   <kbd id="F2" class="kbd">F2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="F3" class="kbd">F3</kbd>
                   <kbd id="F4" class="kbd">F4</kbd>
                 </div>
@@ -340,11 +361,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>G</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="G1" class="kbd">G1</kbd>
                   <kbd id="G2" class="kbd">G2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="G3" class="kbd">G3</kbd>
                   <kbd id="G4" class="kbd">G4</kbd>
                 </div>
@@ -354,12 +375,12 @@
               <div
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
-                <span>B</span>
-                <div class="space-x-20 -ml-20">
+                <span>H</span>
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="H1" class="kbd">H1</kbd>
                   <kbd id="H2" class="kbd">H2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="H3" class="kbd">H3</kbd>
                   <kbd id="H4" class="kbd">H4</kbd>
                 </div>
@@ -370,11 +391,11 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>I</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="I1" class="kbd">I1</kbd>
                   <kbd id="I2" class="kbd">I2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="I3" class="kbd">I3</kbd>
                   <kbd id="I4" class="kbd">I4</kbd>
                 </div>
@@ -385,17 +406,18 @@
                 class="text-[#03071280] flex justify-between items-center my-3"
               >
                 <span>J</span>
-                <div class="space-x-20 -ml-20">
+                <div class="space-x-2 md:space-x-20 md:-ml-20">
                   <kbd id="J1" class="kbd">J1</kbd>
                   <kbd id="J2" class="kbd">J2</kbd>
                 </div>
-                <div class="space-x-20">
+                <div class="space-x-4 md:space-x-20">
                   <kbd id="J3" class="kbd">J3</kbd>
                   <kbd id="J4" class="kbd">J4</kbd>
                 </div>
               </div>
             </div>
-            <div class="w-2/5 py-5">
+            <div class="w-full lg:w-2/5 py-5">
+              <!-- booking right -->
               <h2 class="my-4">Select Your Seat</h2>
               <div class="p-3 bg-[#F7F8F8]">
                 <div
@@ -468,8 +490,14 @@
               <button class="btn w-full bg-[#1dd100] text-white text-xl">
                 Next
               </button>
-              <a href="" class="text-xs mr-2 underline">Terms and Conditions</a>
-              <a href="" class="text-xs underline">Cancellation Policy</a>
+
+              <!-- policy section -->
+              <div class="flex justify-between p-4">
+                <a href="" class="text-xs mr-2 underline"
+                  >Terms and Conditions</a
+                >
+                <a href="" class="text-xs underline">Cancellation Policy</a>
+              </div>
             </div>
           </div>
         </div>
