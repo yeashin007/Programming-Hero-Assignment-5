@@ -97,7 +97,7 @@
           <button
             class="btn text-xl text-gray-700 font-bold bg-[#1dd100] border-none hover:text-[#1dd100]"
           >
-            Buy Tickets
+            <a href="#booking-scetion">Buy Tickets</a>
           </button>
         </div>
       </section>
@@ -111,7 +111,7 @@
         </h2>
         <!-- coupon container -->
         <div
-          class="flex flex-col lg:flex-row justify-between gap-6 *:flex-1 *:rounded-3xl my-10"
+          class="flex flex-col md:flex-row justify-between gap-6 *:flex-1 *:rounded-3xl my-10"
         >
           <!-- 1st coupon -->
           <div class="bg-[#FFBF0F] max-w-full flex justify-evenly items-center">
@@ -166,6 +166,7 @@
 
       <!-- booking section -->
       <section
+        id="booking-scetion"
         class="bg-[#F7F8F8] rounded-[40px] py-14 border-t-2 border-[#1dd100]"
       >
         <div
@@ -200,7 +201,7 @@
                   class="btn bg-[#1dd10066] font-bold text-[#1dd100] rounded-xl hover:bg-white hover:border-[#1dd100]"
                 >
                   <img src="images/seat-green.png" alt="green seat pic" />
-                  <span>40</span>Seats left
+                  <span id="remain-seats">40</span>Seats left
                 </button>
               </div>
               <div class="bg-gray-100 p-4 rounded-lg my-4">
@@ -234,7 +235,9 @@
             </div>
             <div class="flex flex-col justify-center items-center">
               <img src="images/fare.png" alt="fare pic" />
-              <h3 class="text-3xl font-bold text-center">550 Taka</h3>
+              <h3 class="text-3xl font-bold text-center">
+                <span id="ticket-price">550</span> Taka
+              </h3>
               <p class="text-base font-semibold text-[#03071299]">Per Seat</p>
             </div>
           </div>
@@ -244,7 +247,7 @@
             class="flex flex-col lg:flex-row justify-between items-center bg-white p-3 lg:px-5 gap-4"
           >
             <div class="w-full lg:w-3/5 py-5 px-5">
-              <h4>Select Your Seat</h4>
+              <h4 class="text-2xl font-bold">Select Your Seat</h4>
               <div
                 class="flex justify-between *:flex py-3 mt-3 border-y-2 border-dotted"
               >
@@ -418,27 +421,36 @@
             </div>
             <div class="w-full lg:w-2/5 py-5">
               <!-- booking right -->
-              <h2 class="my-4">Select Your Seat</h2>
+              <h2 class="my-4 text-2xl font-bold">Select Your Seat</h2>
               <div class="p-3 bg-[#F7F8F8]">
                 <div
-                  class="flex justify-between border-b-2 border-dotted *:font-bold"
+                  class="flex justify-between border-b-2 border-dotted *:font-bold *:text-lg bg-gray-200 p-2 rounded-md"
                 >
-                  <h4>Seat</h4>
+                  <h4>
+                    Seat
+                    <span
+                      class="bg-[#1dd100] inline-flex justify-center items-center w-6 h-6 rounded-full text-center font-medium text-lg text-red-600"
+                    >
+                      <span id="seat-counter">0</span>
+                    </span>
+                  </h4>
                   <h4>Class</h4>
                   <h4>Price</h4>
                 </div>
-                <ul id="selection-list" class="border-b-2">
-                  <li>
-                    <p>B3</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </li>
-                </ul>
+                <ul id="selection-list" class="border-b-2"></ul>
 
                 <!-- total row -->
                 <div class="flex justify-between *:font-bold py-2">
                   <h3>Total Price</h3>
-                  <h3>BDT <span id="total-content">500</span></h3>
+                  <h3>BDT <span id="total-price">0</span></h3>
+                </div>
+
+                <!-- discount -->
+                <div class="hidden">
+                  <div class="flex justify-between my-1">
+                    <p>Discount</p>
+                    <p id="discount-element">0</p>
+                  </div>
                 </div>
 
                 <!-- cupon validation -->
@@ -450,6 +462,8 @@
                     class="p-2 py-3 rounded-md w-full inline"
                   />
                   <button
+                    onclick="calcDiscount()"
+                    id="btn-apply"
                     class="btn bg-[#1dd100] text-white absolute right-1 py-0"
                   >
                     Apply
@@ -457,7 +471,7 @@
                 </div>
                 <div class="flex justify-between *:font-bold py-3">
                   <h3>Grand Total</h3>
-                  <h3>BDT <span id="grand-total-content">500</span></h3>
+                  <h3>BDT <span id="grand-total">0</span></h3>
                 </div>
               </div>
 
@@ -504,5 +518,7 @@
       </section>
     </main>
     <footer>Footer</footer>
+
+    <script src="scripts/script.js"></script>
   </body>
 </html>

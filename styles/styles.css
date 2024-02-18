@@ -12,11 +12,17 @@
   margin: 8px 0;
 }
 
+.bg-green {
+  background-color: #1dd100;
+  color: white;
+  color: #e7e7e7;
+}
+
 /* .text-green {
   color: text-[#1dd100];
 }
 
 .bg-green {
     bg-[#1dd10066] 
-    text-[#03071280]
-} */
+}
+*/
