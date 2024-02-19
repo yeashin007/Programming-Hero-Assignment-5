@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 8px 0;
+  border-radius: 5px;
 }
 
 .bg-green {
@@ -17,12 +18,3 @@
   color: white;
   color: #e7e7e7;
 }
-
-/* .text-green {
-  color: text-[#1dd100];
-}
-
-.bg-green {
-    bg-[#1dd10066] 
-}
-*/
