@@ -115,18 +115,37 @@ function activeBtn() {
   }
 }
 
-function primary(el, value) {
+function setValue(el, value) {
   el.innerText = value;
 }
 
 function init() {
+  cuponInputEl.value = "";
+  cuponInputEl.setAttribute("disabled", "");
+  btnApply.setAttribute("disabled", "");
   btnNext.setAttribute("disabled", "");
-  primary(remainSeatEl, 40);
-  primary(seatCounter, 0);
-  primary(totolPriceEl, 0);
-  primary(grandTotalEl, 0);
+  couponContainer.classList.remove("hidden");
+  discountElement.parentNode.parentNode.classList.add("hidden");
+  inputPhone.value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
 
-  while (selectionList.childNodes > 0) {
+  remainSeat = 40;
+  bookedSeat = 0;
+  totalPrice = 0;
+  grandTotal = 0;
+
+  setValue(remainSeatEl, 40);
+  setValue(seatCounter, 0);
+  setValue(totolPriceEl, 0);
+  setValue(grandTotalEl, 0);
+  setValue(discountElement, 0);
+
+  while (selectionList.hasChildNodes()) {
     selectionList.removeChild(selectionList.firstChild);
+  }
+  for (const seat of allSeats) {
+    seat.removeAttribute("disabled");
+    seat.classList.remove("bg-green");
   }
 }
